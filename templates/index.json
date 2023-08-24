@@ -1,0 +1,168 @@
+{
+  "sections": {
+    "d16e2c3b-3410-4c8b-82b8-2270e8348706": {
+      "type": "collection-list",
+      "blocks": {
+        "template--20332661440790__d16e2c3b-3410-4c8b-82b8-2270e8348706-collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "сумки",
+            "alternative_image": "shopify:\/\/shop_images\/DSCF3055.jpg",
+            "show_border": false,
+            "collection_subtitle": ""
+          }
+        },
+        "template--20332661440790__d16e2c3b-3410-4c8b-82b8-2270e8348706-collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "пенал",
+            "alternative_image": "shopify:\/\/shop_images\/600x560_6.png",
+            "show_border": false,
+            "collection_subtitle": ""
+          }
+        },
+        "template--20332661440790__d16e2c3b-3410-4c8b-82b8-2270e8348706-collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "блокноты",
+            "alternative_image": "shopify:\/\/shop_images\/600x560_7_68ec6590-bbf5-429d-9f2d-d0f4904aa648.png",
+            "show_border": false,
+            "collection_subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20332661440790__d16e2c3b-3410-4c8b-82b8-2270e8348706-collection-1",
+        "template--20332661440790__d16e2c3b-3410-4c8b-82b8-2270e8348706-collection-2",
+        "template--20332661440790__d16e2c3b-3410-4c8b-82b8-2270e8348706-collection-3"
+      ],
+      "settings": {
+        "title": "Browse by product"
+      }
+    },
+    "a6fb53d6-c7f9-41a9-895b-526361cb7468": {
+      "type": "slideshow",
+      "blocks": {
+        "ca187bbb-f6ff-4682-852a-9f725de751ff": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_1_cefef3be-beeb-405b-be40-f63e678ebb7b.png",
+            "slide_link": "",
+            "bg_color": "#000000",
+            "bg_opacity": 45,
+            "subheading": "Whether you're a true enthusiast or simply curious, our blog opens the door to endless opportunities and creative sparks ignited by authentic leather accessories.",
+            "title": "",
+            "title_size": 34,
+            "text": "<p>Join us as we delve deep into the artistry, versatility, and enduring allure of leather, unraveling its secrets and celebrating its role in enhancing your everyday life.<\/p>",
+            "text_color": "#ffffff",
+            "button_label_1": "Read more",
+            "button_url_1": "shopify:\/\/blogs\/news",
+            "button_label_2": "",
+            "button_url_2": "",
+            "overlay_position": "bottom-right"
+          }
+        }
+      },
+      "block_order": [
+        "ca187bbb-f6ff-4682-852a-9f725de751ff"
+      ],
+      "disabled": true,
+      "settings": {
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 500,
+        "mobile_overlay_under": false,
+        "overlay_style": "full",
+        "slide_transition": "fade",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "1ecb04a2-43ae-43cf-8b80-f06f032ab967": {
+      "type": "testimonials",
+      "blocks": {
+        "template--20332661440790__1ecb04a2-43ae-43cf-8b80-f06f032ab967-testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial_product": "",
+            "testimonial_stars": 5,
+            "testimonial_comment": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "testimonial_author": "Author's name",
+            "testimonial_location": ""
+          }
+        },
+        "template--20332661440790__1ecb04a2-43ae-43cf-8b80-f06f032ab967-testimonial-2": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial_product": "",
+            "testimonial_stars": 5,
+            "testimonial_comment": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "testimonial_author": "Author's name",
+            "testimonial_location": ""
+          }
+        },
+        "template--20332661440790__1ecb04a2-43ae-43cf-8b80-f06f032ab967-testimonial-3": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial_product": "",
+            "testimonial_stars": 5,
+            "testimonial_comment": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "testimonial_author": "Author's name",
+            "testimonial_location": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20332661440790__1ecb04a2-43ae-43cf-8b80-f06f032ab967-testimonial-1",
+        "template--20332661440790__1ecb04a2-43ae-43cf-8b80-f06f032ab967-testimonial-2",
+        "template--20332661440790__1ecb04a2-43ae-43cf-8b80-f06f032ab967-testimonial-3"
+      ],
+      "settings": {
+        "title": "Reviews",
+        "tab_products": true
+      }
+    },
+    "fd0b7850-4023-4113-a0e7-b158f11ffec3": {
+      "type": "image-with-text",
+      "settings": {
+        "layout": "image_on_left",
+        "image": "shopify:\/\/shop_images\/1200_1200_2.png",
+        "heading": "Crafting Uniquenes: Where Leather and Love Meetl",
+        "content": "<p>Pair text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+        "button_text": "About us",
+        "button_url": "shopify:\/\/pages\/about-us"
+      }
+    },
+    "21129299-7c9e-4f3a-97c0-a7ebb7815777": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Top Sales",
+        "collection": "",
+        "show_vendor": false,
+        "enable_carousel": false,
+        "column_count": 3,
+        "row_count": 1
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "settings": {
+        "layout": "center",
+        "heading": "",
+        "content": "<p><em>“From day one, our adventure began with a mission to craft a unique mark in the realm of leather accessories. We passionately believe that exceptional quality doesn't need a hefty price. Each creation we shape is dedicated to sprinkling a touch of enchantment onto your daily life and personal flair”<\/em><\/p>",
+        "button_text": "",
+        "button_url": "",
+        "color_bg": "#f8efeb",
+        "color_text": "#404040"
+      }
+    }
+  },
+  "order": [
+    "d16e2c3b-3410-4c8b-82b8-2270e8348706",
+    "a6fb53d6-c7f9-41a9-895b-526361cb7468",
+    "1ecb04a2-43ae-43cf-8b80-f06f032ab967",
+    "fd0b7850-4023-4113-a0e7-b158f11ffec3",
+    "21129299-7c9e-4f3a-97c0-a7ebb7815777",
+    "rich-text"
+  ]
+}

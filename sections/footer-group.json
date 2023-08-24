@@ -1,0 +1,59 @@
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "newsletter": {
+          "type": "newsletter",
+          "disabled": true,
+          "settings": {
+            "subscribe_title": "Get updates",
+            "subscribe_label": "Email address",
+            "subscribe_button": "Sign up",
+            "subscribe_description": ""
+          }
+        },
+        "menu": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "footer"
+          }
+        },
+        "e8d6ba93-d347-4fb5-bfba-bfca9ea9e853": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "footer-2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "heading": "Talk about your store",
+            "text": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter",
+        "menu",
+        "e8d6ba93-d347-4fb5-bfba-bfca9ea9e853",
+        "text"
+      ],
+      "settings": {
+        "small_linklist": "",
+        "show_payment_icons": true,
+        "show_social_icons": true,
+        "show_country_selector": true,
+        "show_language_selector": true
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

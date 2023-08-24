@@ -1,0 +1,88 @@
+{
+  "sections": {
+    "ab476e89-0258-429e-b040-81ef75e453fa": {
+      "type": "collection-list",
+      "blocks": {
+        "template--20332661408022__ab476e89-0258-429e-b040-81ef75e453fa-collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "сумки",
+            "alternative_image": "shopify:\/\/shop_images\/DSCF3055.jpg",
+            "show_border": false,
+            "collection_subtitle": ""
+          }
+        },
+        "template--20332661408022__ab476e89-0258-429e-b040-81ef75e453fa-collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "пенал",
+            "alternative_image": "shopify:\/\/shop_images\/600x560_6.png",
+            "show_border": false,
+            "collection_subtitle": ""
+          }
+        },
+        "template--20332661408022__ab476e89-0258-429e-b040-81ef75e453fa-collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "блокноты",
+            "alternative_image": "shopify:\/\/shop_images\/600x560_7.png",
+            "show_border": false,
+            "collection_subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20332661408022__ab476e89-0258-429e-b040-81ef75e453fa-collection-1",
+        "template--20332661408022__ab476e89-0258-429e-b040-81ef75e453fa-collection-2",
+        "template--20332661408022__ab476e89-0258-429e-b040-81ef75e453fa-collection-3"
+      ],
+      "settings": {
+        "title": "Browse by product "
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "show_vendor": false,
+        "column_count": 4,
+        "pagination_limit": 16,
+        "crop": "middle",
+        "title_position": "top",
+        "description_position": "top",
+        "show_filters": true,
+        "show_filter_prod_counts": true,
+        "show_sort_by": true,
+        "show_featured": false
+      }
+    },
+    "cb07b11a-1897-4460-94be-adb9b290f311": {
+      "type": "rich-text",
+      "settings": {
+        "layout": "center",
+        "heading": "",
+        "content": "<p><em>“From day one, our adventure began with a mission to craft a unique mark in the realm of leather accessories. We passionately believe that exceptional quality doesn't need a hefty price. Each creation we shape is dedicated to sprinkling a touch of enchantment onto your daily life and personal flair” <\/em><\/p>",
+        "button_text": "",
+        "button_url": "",
+        "color_bg": "#f5f5f5",
+        "color_text": "#122538"
+      }
+    },
+    "b25f1375-92da-40a3-b5a7-7f114ec0f1ce": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Leather File Folders",
+        "collection": "пенал",
+        "show_vendor": false,
+        "enable_carousel": false,
+        "column_count": 3,
+        "row_count": 1
+      }
+    }
+  },
+  "order": [
+    "ab476e89-0258-429e-b040-81ef75e453fa",
+    "main",
+    "cb07b11a-1897-4460-94be-adb9b290f311",
+    "b25f1375-92da-40a3-b5a7-7f114ec0f1ce"
+  ]
+}

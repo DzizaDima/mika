@@ -1,0 +1,42 @@
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "announcement_bar_text": "Free shipping on all orders over $500",
+        "announcement_bar_url": "",
+        "announcement_bar_full_width": true,
+        "announcement_bar_bg": "#122538",
+        "announcement_bar_text_color": "#f5f5f5"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo": "shopify:\/\/shop_images\/logo-b_etsy.png",
+        "logo_max_width": "175",
+        "mobile_logo_max_width": "250",
+        "main_linklist": "main-menu",
+        "show_mobile_collection_images": true,
+        "show_border_bottom": true,
+        "search_links_horizontal_title": "",
+        "search_links_horizontal_linklist": "",
+        "search_linklist_horizontal_fancy": true,
+        "search_links_vertical_title": "",
+        "search_links_vertical_linklist": "",
+        "show_country_selector": true,
+        "show_language_selector": true,
+        "quicklink_show": true,
+        "quicklink_type": "quicklink_newsletter",
+        "quicklink_content": "Get on the list",
+        "quicklink_url": ""
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

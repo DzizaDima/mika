@@ -1,0 +1,68 @@
+{%- if section.settings.announcement_bar_text != blank -%}
+  {% style %}
+    .announcement-bar {
+      color: {{ section.settings.announcement_bar_text_color }};
+      background-color: {{ section.settings.announcement_bar_bg }};
+    }
+    .announcement-bar a {
+      color: {{ section.settings.announcement_bar_text_color }};
+      text-decoration: none;
+    }
+    .announcement-bar--has-link:hover {
+      background-color: {{ section.settings.announcement_bar_bg | color_darken: 10 }};
+    }
+  {% endstyle %}
+  <div class="announcement-bar{% if section.settings.announcement_bar_url != blank %} announcement-bar--has-link{% endif %}{% if section.settings.announcement_bar_full_width %} announcement-bar--full-width{% endif %}" data-section-type="announcement-bar">
+    {%- if section.settings.announcement_bar_url != blank -%}
+      <a href="{{ section.settings.announcement_bar_url }}">
+    {%- endif -%}
+      <div class="page-width">
+        <div class="container">
+          <div class="announcement-bar__content">
+            {{ section.settings.announcement_bar_text }}
+          </div>
+        </div>
+      </div>
+    {%- if section.settings.announcement_bar_url != blank -%}
+      </a>
+    {%- endif -%}
+  </div>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Announcement bar",
+    "class": "section-announcement-bar",
+    "settings": [
+      {
+        "type": "text",
+        "id": "announcement_bar_text",
+        "label": "Text",
+        "default": "Add notices for your shoppers here"
+      },
+      {
+        "type": "url",
+        "id": "announcement_bar_url",
+        "label": "Link"
+      },
+      {
+        "type": "checkbox",
+        "id": "announcement_bar_full_width",
+        "label": "Full width",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "announcement_bar_bg",
+        "label": "Background color",
+        "default": "#484848"
+      },
+      {
+        "type": "color",
+        "id": "announcement_bar_text_color",
+        "label": "Text color",
+        "default": "#ffffff"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,56 @@
+{
+  "sections": {
+    "1981e568-6d78-424a-b114-2a3602be1723": {
+      "type": "slideshow",
+      "blocks": {
+        "template--20332661342486__1981e568-6d78-424a-b114-2a3602be1723-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_1.png",
+            "slide_link": "",
+            "bg_color": "#000000",
+            "bg_opacity": 45,
+            "subheading": "Whether you're a true enthusiast or simply curious, our blog opens the door to endless opportunities and creative sparks ignited by authentic leather accessories.",
+            "title": "",
+            "title_size": 34,
+            "text": "<p>Join us as we delve deep into the artistry, versatility, and enduring allure of leather, unraveling its secrets and celebrating its role in enhancing your everyday life.<\/p>",
+            "text_color": "#f5f5f5",
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "overlay_position": "bottom-right"
+          }
+        }
+      },
+      "block_order": [
+        "template--20332661342486__1981e568-6d78-424a-b114-2a3602be1723-image-1"
+      ],
+      "settings": {
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 500,
+        "mobile_overlay_under": false,
+        "overlay_style": "full",
+        "slide_transition": "fade",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "show_title": false,
+        "show_rss": false,
+        "show_tags": true,
+        "show_author": true,
+        "show_date": true,
+        "show_sidebar": true
+      }
+    }
+  },
+  "order": [
+    "1981e568-6d78-424a-b114-2a3602be1723",
+    "main"
+  ]
+}
