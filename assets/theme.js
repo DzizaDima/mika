@@ -3760,6 +3760,16 @@
       this.$zoomValidThumbs = $(selectors.zoomValidThumbs, this.$container);
 
       this.$container.on('variantChange' + this.namespace, this.functions.updateAddToCartState.bind(this));
+      this.$container.on('variantChange' + this.namespace, (e)=>{
+        let personalizationInput = document.querySelector('#personalization-text')
+        if(personalizationInput){
+          if(e.variant.options.includes('Yes')){
+            personalizationInput.closest('.personalization-block').classList.remove('hidden')
+          }else{
+            personalizationInput.closest('.personalization-block').classList.add('hidden')
+          }
+        }
+      })
       this.$container.on('variantPriceChange' + this.namespace, this.functions.updateProductPrices.bind(this));
 
       if (this.$container.find(selectors.skuWrapper)) {

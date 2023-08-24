@@ -300,6 +300,11 @@
                   </select>
 
                   <div class="{% unless block.settings.enable_payment_button or block.settings.show_quantity_selector == false %}product-qty-row-beside{% endunless %}">
+                    <div class="personalization-block  {% unless product.selected_or_first_available_variant.options contains 'Yes' %} hidden {% endunless %}">
+                      <label for="personalization-text">Personalization Text</label>
+                      <input id="personalization-text" type="text" name="properties[Personalization Text]">
+                    </div>
+                  
                     {% if block.settings.show_quantity_selector %}
                       <div class="form-row input-row--full-width">
                         {% render 'quantity-selector', variant: current_variant %}
