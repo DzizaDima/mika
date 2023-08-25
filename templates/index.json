@@ -1,5 +1,54 @@
 {
   "sections": {
+    "a2836766-da47-4c07-9739-518a01dd3882": {
+      "type": "hero-section",
+      "blocks": {
+        "18b0e8a4-c197-4a28-9a6d-0e43bde8cf4b": {
+          "type": "navigation",
+          "settings": {
+            "hero_svg": "shopify:\/\/shop_images\/bags.svg",
+            "hero_linklist_title": "Test",
+            "hero_menu_link": "",
+            "hero_links": "test"
+          }
+        },
+        "f5e51ff7-d521-4a4d-8044-16deeadbfcc7": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Quick links",
+            "hero_menu_link": "shopify:\/\/collections\/all",
+            "hero_links": "main-menu"
+          }
+        },
+        "2435b50d-3599-4ff6-b3ca-aba74fd84845": {
+          "type": "slide",
+          "settings": {
+            "hero-slider-img": "shopify:\/\/shop_images\/DSCF4248.jpg"
+          }
+        },
+        "4ebae272-e4f9-4ce8-8158-465563167ad0": {
+          "type": "slide",
+          "settings": {
+            "hero-slider-img": "shopify:\/\/shop_images\/DSCF4225.jpg"
+          }
+        },
+        "1f653a00-2a28-423c-8fb3-6d00fd677b05": {
+          "type": "slide",
+          "settings": {
+            "hero-slider-img": "shopify:\/\/shop_images\/1_865d6d8c-36ba-47ef-93a0-9a08a57f69a4.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "18b0e8a4-c197-4a28-9a6d-0e43bde8cf4b",
+        "f5e51ff7-d521-4a4d-8044-16deeadbfcc7",
+        "2435b50d-3599-4ff6-b3ca-aba74fd84845",
+        "4ebae272-e4f9-4ce8-8158-465563167ad0",
+        "1f653a00-2a28-423c-8fb3-6d00fd677b05"
+      ],
+      "settings": {
+      }
+    },
     "d16e2c3b-3410-4c8b-82b8-2270e8348706": {
       "type": "collection-list",
       "blocks": {
@@ -158,6 +207,7 @@
     }
   },
   "order": [
+    "a2836766-da47-4c07-9739-518a01dd3882",
     "d16e2c3b-3410-4c8b-82b8-2270e8348706",
     "a6fb53d6-c7f9-41a9-895b-526361cb7468",
     "1ecb04a2-43ae-43cf-8b80-f06f032ab967",
