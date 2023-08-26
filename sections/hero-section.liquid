@@ -1,0 +1,146 @@
+<div class="hero-section">
+  <div class="hero-section-content page-width">
+    {% assign navs = section.blocks | where: 'type', "navigation" %}
+    {% assign slides = section.blocks | where: 'type', "slide" %}
+    {% if navs.size > 0 %}
+      <ul class="hero-navigation">
+        {% for block in navs %}
+
+          <li class="hero-navigation-block">
+            {% if block.settings.hero_svg %}
+              <img src="{{ block.settings.hero_svg | image_url: width:"20", height: '25' }}" alt="{{ block.settings.hero_svg.alt }}">
+            {% endif %}
+            <a href="{{ block.settings.hero_menu_link }}">
+              {% if block.settings.hero_linklist_title != blank %}
+                {{ block.settings.hero_linklist_title }}
+              {% elsif block.settings.hero_links != blank %}
+                {{ block.settings.hero_links.title }}
+              {% endif %}
+              {% if block.settings.hero_links.size > 0 %}
+                {% render 'icon-arrow' %}
+              {% endif %}
+            </a>
+            {% if block.settings.hero_links.size > 0 %}
+              <ul class="hero-submenu">
+                {% for hero_link in block.settings.hero_links.links %}
+                  <li>
+                    <a href="{{ hero_link.url }}">
+                      {{ hero_link.title }}
+                      {% if hero_link.links.size > 0 %}
+                        {% render 'icon-arrow' %}
+                      {% endif %}
+                    </a>
+                    {% if hero_link.links.size > 0 %}
+                      <ul class="hero-submenu">
+                        {% for sublink in hero_link.links %}
+                          <li>
+                            <a href="{{ sublink.url }}">
+                              {{ sublink.title }}
+                              {% if sublink.links.size > 0 %}
+                                {% render 'icon-arrow' %}
+                              {% endif %}
+                            </a>
+                            {% if sublink.links.size > 0 %}
+                              <ul class="hero-submenu">
+                                {% for droplink in sublink.links %}
+                                  <li>
+                                    <a href="{{ droplink.url }}">
+                                      {{ droplink.title }}
+                                    </a>
+                                  </li>
+                                {% endfor %}
+                              </ul>
+                            {% endif %}
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <div class="hero-slider" {% if navs.size == 0 %}style="max-width: 100%;"{% endif %}>
+      <div class="swiper swiper-hero">
+        <div class="swiper-wrapper">
+          {% if slides.size > 0 %}
+            {% for block in slides %}
+              <div class="swiper-slide">
+                <img src="{{ block.settings.hero-slider-img | image_url: width:"1500" }}" alt="">
+              </div>
+            {% endfor %}
+          {% else %}
+            <div class="swiper-slide">
+              {{- 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' -}}
+            </div>
+          {% endif %}
+        </div>
+        <div class="swiper-pagination swiper-pagination-hero"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  const swiper = new Swiper('.swiper-hero', {
+    direction: 'horizontal',
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination-hero'
+    },
+    autoplay: {
+      delay: 5000
+    }
+  });
+</script>
+{% schema %}
+  {
+    "name": "Hero Section",
+    "tag": "section",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "navigation",
+        "name": "Navigation",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "hero_svg",
+            "label": "Image"
+          }, {
+            "type": "text",
+            "id": "hero_linklist_title",
+            "label": "Heading",
+            "default": "Quick links"
+          }, {
+            "type": "url",
+            "id": "hero_menu_link",
+            "label": "Button link"
+          }, {
+            "type": "link_list",
+            "id": "hero_links",
+            "label": "Menu"
+          }
+        ]
+      }, {
+        "type": "slide",
+        "name": "Slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "hero-slider-img",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero Section"
+      }
+    ]
+  }
+{% endschema %}
