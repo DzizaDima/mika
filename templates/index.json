@@ -7,7 +7,7 @@
           "type": "navigation",
           "settings": {
             "hero_svg": "shopify:\/\/shop_images\/bags.svg",
-            "hero_linklist_title": "Test",
+            "hero_linklist_title": "",
             "hero_menu_link": "",
             "hero_links": "test"
           }

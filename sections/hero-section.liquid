@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <div class="hero-section">
   <div class="hero-section-content page-width">
     {% assign navs = section.blocks | where: 'type', "navigation" %}
@@ -9,9 +7,15 @@
         {% for block in navs %}
 
           <li class="hero-navigation-block">
-            <img src="{{ block.settings.hero_svg | image_url: width:"20", height: '25' }}" alt="">
+            {% if block.settings.hero_svg %}
+              <img src="{{ block.settings.hero_svg | image_url: width:"20", height: '25' }}" alt="{{ block.settings.hero_svg.alt }}">
+            {% endif %}
             <a href="{{ block.settings.hero_menu_link }}">
-              {{ block.settings.hero_linklist_title }}
+              {% if block.settings.hero_linklist_title != blank %}
+                {{ block.settings.hero_linklist_title }}
+              {% elsif block.settings.hero_links != blank %}
+                {{ block.settings.hero_links.title }}
+              {% endif %}
               {% if block.settings.hero_links.size > 0 %}
                 {% render 'icon-arrow' %}
               {% endif %}
@@ -62,137 +66,24 @@
 
     <div class="hero-slider" {% if navs.size == 0 %}style="max-width: 100%;"{% endif %}>
       <div class="swiper swiper-hero">
-        <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
-          <!-- Slides -->
           {% if slides.size > 0 %}
             {% for block in slides %}
               <div class="swiper-slide">
                 <img src="{{ block.settings.hero-slider-img | image_url: width:"1500" }}" alt="">
               </div>
             {% endfor %}
-          {% endif %}
-          {% if slides.size == 0 %}
+          {% else %}
             <div class="swiper-slide">
               {{- 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' -}}
             </div>
           {% endif %}
-
-
         </div>
-        <!-- If we need pagination -->
         <div class="swiper-pagination swiper-pagination-hero"></div>
       </div>
     </div>
   </div>
 </div>
-<style>
-  .hero-section {
-    width: 100%;
-  }
-  .hero-section-content {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    max-width: 100%;
-  }
-  .hero-navigation {
-    width: 25%;
-  }
-  .hero-navigation-block {
-    padding: 15px;
-    background-color: #e2e1e1;
-    display: flex;
-    align-items: center;
-    border: 1px solid rgb(218, 216, 216);
-  }
-  .hero-navigation-block > img {
-    padding-right: 10px;
-  }
-  .hero-navigation-block > a {
-    text-decoration: none;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .hero-navigation-block:hover {
-    background-color: #c9c8c8;
-  }
-  .hero-submenu {
-    position: absolute;
-    left: calc(25% + 14px);
-    top: 0;
-    z-index: 5;
-    min-width: 302px;
-    height: 480px;
-    background: #e2e1e1;
-    visibility: hidden;
-    opacity: 0;
-    transform-origin: 0 0;
-    transform: rotateX(-90deg);
-    transition: 0.3s linear;
-  }
-
-  .hero-submenu li {
-    position: relative;
-  }
-  .hero-submenu li:hover {
-    background-color: #c9c8c8;
-  }
-  .hero-submenu li a {
-    display: flex;
-    justify-content: space-between;
-    color: #282828;
-    padding: 10px 20px;
-    font-size: 13px;
-    text-decoration: none;
-    align-items: center;
-  }
-  .hero-submenu .hero-submenu {
-    position: absolute;
-    width: 100%;
-    left: 100%;
-    top: 0;
-    transition: 0.3s linear;
-  }
-  .hero-navigation > li:hover > .hero-submenu {
-    transform: rotateX(0deg);
-    visibility: visible;
-    opacity: 1;
-  }
-  .hero-submenu > li:hover > .hero-submenu {
-    transform: rotateX(0deg);
-    visibility: visible;
-    opacity: 1;
-  }
-  .hero-arr {
-    width: 10px;
-    height: 15px;
-  }
-  .hero-slider {
-    max-width: 75%;
-    max-height: 100%;
-  }
-
-  .swiper {
-    width: 100%;
-    height: 480px;
-    overflow: hidden;
-  }
-  .swiper-slide > img {
-    max-width: 100%;
-    height: auto;
-  }
-  @media(max-width: 991px) {
-    .hero-navigation {
-      display: none;
-    }
-    .hero-slider {
-      max-width: 100%;
-    }
-  }
-</style>
 <script>
   const swiper = new Swiper('.swiper-hero', {
     direction: 'horizontal',
