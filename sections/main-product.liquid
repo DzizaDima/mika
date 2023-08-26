@@ -215,8 +215,8 @@
                     {% endif %}
                   </span>
                   {% assign compare_at_price = current_variant.compare_at_price | divided_by: 1.1 | times: 1.1 %}
-                  {% assign percent = current_variant.price | times: 100 | divided_by: current_variant.compare_at_price | round %}
-                  <span class="precent">({{ percent }}% Off)</span>
+                  {% assign percent = current_variant.price | times: 100 | divided_by: compare_at_price | round %}
+                  <span class="precent">({{ 100 | minus: percent }}% Off)</span>
                 {%- endif -%}
 
                 {% render 'unit-price', variant: current_variant %}
