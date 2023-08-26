@@ -6,7 +6,7 @@
     "color_store_name": "#122538",
     "color_links_text": "#566f88",
     "color_price_text": "#122538",
-    "color_sale_price_text": "#d84d3c",
+    "color_sale_price_text": "#000000",
     "color_stars": "#566f88",
     "color_exp_tab": "#f5f5f5",
     "color_main_nav_text": "#122538",
@@ -51,6 +51,7 @@
     "enable_live_search": true,
     "live_search_show_price": true,
     "live_search_show_vendor": false,
+    "currency_code_enabled": true,
     "sections": {
       "banner": {
         "type": "banner",
