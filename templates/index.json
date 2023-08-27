@@ -3,23 +3,6 @@
     "a2836766-da47-4c07-9739-518a01dd3882": {
       "type": "hero-section",
       "blocks": {
-        "18b0e8a4-c197-4a28-9a6d-0e43bde8cf4b": {
-          "type": "navigation",
-          "settings": {
-            "hero_svg": "shopify:\/\/shop_images\/bags.svg",
-            "hero_linklist_title": "",
-            "hero_menu_link": "",
-            "hero_links": "test"
-          }
-        },
-        "f5e51ff7-d521-4a4d-8044-16deeadbfcc7": {
-          "type": "navigation",
-          "settings": {
-            "hero_linklist_title": "Quick links",
-            "hero_menu_link": "shopify:\/\/collections\/all",
-            "hero_links": "main-menu"
-          }
-        },
         "2435b50d-3599-4ff6-b3ca-aba74fd84845": {
           "type": "slide",
           "settings": {
@@ -37,14 +20,103 @@
           "settings": {
             "hero-slider-img": "shopify:\/\/shop_images\/1_865d6d8c-36ba-47ef-93a0-9a08a57f69a4.jpg"
           }
+        },
+        "18b0e8a4-c197-4a28-9a6d-0e43bde8cf4b": {
+          "type": "navigation",
+          "settings": {
+            "hero_svg": "shopify:\/\/shop_images\/bags.svg",
+            "hero_linklist_title": "Leather Notepads",
+            "hero_menu_link": "",
+            "hero_links": "leather-notepads"
+          }
+        },
+        "f5e51ff7-d521-4a4d-8044-16deeadbfcc7": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Leather File Folders",
+            "hero_menu_link": "shopify:\/\/collections\/all",
+            "hero_links": ""
+          }
+        },
+        "20ccf883-3912-47a6-9a30-5947c2c86f07": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Leather Pen Holders",
+            "hero_menu_link": "",
+            "hero_links": "leather-pen-holders"
+          }
+        },
+        "24699234-19f4-4604-890e-54c98caad1b8": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Leather Luggage Tags",
+            "hero_menu_link": "",
+            "hero_links": ""
+          }
+        },
+        "3c30ddf4-2a14-4f50-8319-ab83ddb76fc1": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Leather Passport Covers",
+            "hero_menu_link": "",
+            "hero_links": ""
+          }
+        },
+        "df0fb342-b64d-4bd8-8267-ee9bce3269c0": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Leather Watch straps",
+            "hero_menu_link": "",
+            "hero_links": ""
+          }
+        },
+        "b1530f09-3954-4809-9c86-6402f92c3d2d": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Leather Bags",
+            "hero_menu_link": "",
+            "hero_links": "leather-bags"
+          }
+        },
+        "0d8b7ee8-36b1-4dd6-8db6-10fe02fd700b": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Leather Backpacks",
+            "hero_menu_link": "",
+            "hero_links": ""
+          }
+        },
+        "c0b9bbae-ceaf-4cad-878f-e00307c57efd": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Banana Crossbody bags",
+            "hero_menu_link": "",
+            "hero_links": ""
+          }
+        },
+        "7ef03708-02b2-4092-98d4-4a3bbb43bc68": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Leather Wallets",
+            "hero_menu_link": "",
+            "hero_links": ""
+          }
         }
       },
       "block_order": [
-        "18b0e8a4-c197-4a28-9a6d-0e43bde8cf4b",
-        "f5e51ff7-d521-4a4d-8044-16deeadbfcc7",
         "2435b50d-3599-4ff6-b3ca-aba74fd84845",
         "4ebae272-e4f9-4ce8-8158-465563167ad0",
-        "1f653a00-2a28-423c-8fb3-6d00fd677b05"
+        "1f653a00-2a28-423c-8fb3-6d00fd677b05",
+        "18b0e8a4-c197-4a28-9a6d-0e43bde8cf4b",
+        "f5e51ff7-d521-4a4d-8044-16deeadbfcc7",
+        "20ccf883-3912-47a6-9a30-5947c2c86f07",
+        "24699234-19f4-4604-890e-54c98caad1b8",
+        "3c30ddf4-2a14-4f50-8319-ab83ddb76fc1",
+        "df0fb342-b64d-4bd8-8267-ee9bce3269c0",
+        "b1530f09-3954-4809-9c86-6402f92c3d2d",
+        "0d8b7ee8-36b1-4dd6-8db6-10fe02fd700b",
+        "c0b9bbae-ceaf-4cad-878f-e00307c57efd",
+        "7ef03708-02b2-4092-98d4-4a3bbb43bc68"
       ],
       "settings": {
       }
