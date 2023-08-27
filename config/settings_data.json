@@ -13,8 +13,8 @@
     "color_nav_dropdown_text": "#f5f5f5",
     "color_nav_dropdown_bg": "#122538",
     "color_footer_nav_text": "#122538",
-    "color_mobile_nav_bg": "#3e505c",
-    "color_mobile_nav_text": "#f5f5f5",
+    "color_mobile_nav_bg": "#fff",
+    "color_mobile_nav_text": "#1a1a1a",
     "color_button_one_text": "#f5f5f5",
     "color_button_one_bg": "#122538",
     "color_button_two_text": "#122538",
@@ -100,7 +100,7 @@
           "03218bfd-288a-465e-9f5f-e4ebc718dedd"
         ],
         "settings": {
-          "show_banner": true,
+          "show_banner": false,
           "height": "fixed",
           "height_desktop": 480,
           "height_mobile": 400,

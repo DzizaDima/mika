@@ -14,6 +14,92 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "18b0e8a4-c197-4a28-9a6d-0e43bde8cf4b": {
+          "type": "navigation",
+          "settings": {
+            "hero_svg": "shopify:\/\/shop_images\/bags.svg",
+            "hero_linklist_title": "Leather Notepads",
+            "hero_menu_link": "",
+            "hero_links": "leather-notepads"
+          }
+        },
+        "20ccf883-3912-47a6-9a30-5947c2c86f07": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Leather Pen Holders",
+            "hero_menu_link": "",
+            "hero_links": "leather-pen-holders"
+          }
+        },
+        "24699234-19f4-4604-890e-54c98caad1b8": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Leather Luggage Tags",
+            "hero_menu_link": "",
+            "hero_links": ""
+          }
+        },
+        "3c30ddf4-2a14-4f50-8319-ab83ddb76fc1": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Leather Passport Covers",
+            "hero_menu_link": "",
+            "hero_links": ""
+          }
+        },
+        "df0fb342-b64d-4bd8-8267-ee9bce3269c0": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Leather Watch straps",
+            "hero_menu_link": "",
+            "hero_links": ""
+          }
+        },
+        "b1530f09-3954-4809-9c86-6402f92c3d2d": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Leather Bags",
+            "hero_menu_link": "",
+            "hero_links": "leather-bags"
+          }
+        },
+        "0d8b7ee8-36b1-4dd6-8db6-10fe02fd700b": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Leather Backpacks",
+            "hero_menu_link": "",
+            "hero_links": ""
+          }
+        },
+        "c0b9bbae-ceaf-4cad-878f-e00307c57efd": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Banana Crossbody bags",
+            "hero_menu_link": "",
+            "hero_links": ""
+          }
+        },
+        "7ef03708-02b2-4092-98d4-4a3bbb43bc68": {
+          "type": "navigation",
+          "settings": {
+            "hero_linklist_title": "Leather Wallets",
+            "hero_menu_link": "",
+            "hero_links": ""
+          }
+        }
+      },
+      "block_order": [
+        "18b0e8a4-c197-4a28-9a6d-0e43bde8cf4b",
+        "20ccf883-3912-47a6-9a30-5947c2c86f07",
+        "24699234-19f4-4604-890e-54c98caad1b8",
+        "3c30ddf4-2a14-4f50-8319-ab83ddb76fc1",
+        "df0fb342-b64d-4bd8-8267-ee9bce3269c0",
+        "b1530f09-3954-4809-9c86-6402f92c3d2d",
+        "0d8b7ee8-36b1-4dd6-8db6-10fe02fd700b",
+        "c0b9bbae-ceaf-4cad-878f-e00307c57efd",
+        "7ef03708-02b2-4092-98d4-4a3bbb43bc68"
+      ],
       "settings": {
         "logo": "shopify:\/\/shop_images\/logo-b_etsy.png",
         "logo_max_width": "175",
@@ -26,8 +112,8 @@
         "search_linklist_horizontal_fancy": true,
         "search_links_vertical_title": "",
         "search_links_vertical_linklist": "",
-        "show_country_selector": true,
-        "show_language_selector": true,
+        "show_country_selector": false,
+        "show_language_selector": false,
         "quicklink_show": true,
         "quicklink_type": "quicklink_newsletter",
         "quicklink_content": "Get on the list",

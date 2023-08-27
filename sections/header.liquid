@@ -277,8 +277,7 @@
           </div>
         </div>
       </div>
-
-      <nav class="main-nav-bar{% if section.settings.show_border_bottom %} main-nav-bar--border{% endif %}" aria-label="{{ 'general.accessibility_labels.main_navigation' | t | escape }}">
+      <nav class="main-nav-bar main-nav-bar--desktop {% if section.settings.show_border_bottom %} main-nav-bar--border{% endif %}" aria-label="{{ 'general.accessibility_labels.main_navigation' | t | escape }}">
         <div class="mobile-nav-column-outer">
           <button class="btn btn--plain btn--menu btn--menu-close mobile-menu-content js-close-mobile-menu" aria-label="{{ 'general.accessibility_labels.menu_toggle' | t }}">{% render 'icon-close' %}</button>
           <div class="mobile-nav-column-inner">
@@ -392,10 +391,112 @@
         </div>
         <a href="#" class="mobile-close-region js-close-mobile-menu" aria-label="hidden"></a>
       </nav>
+      <nav class="main-nav-bar main-nav-bar--mobile {% if section.settings.show_border_bottom %} main-nav-bar--border{% endif %}" aria-label="{{ 'general.accessibility_labels.main_navigation' | t | escape }}">
+        <div class="mobile-nav-column-outer">
+          <div class="mob-drawer-header">
+            <button class="btn btn--plain btn--menu btn--menu-close mobile-menu-content js-close-mobile-menu" aria-label="{{ 'general.accessibility_labels.menu_toggle' | t }}">{% render 'icon-close' %}</button>
+            <div class="mob-drawer-title">Catalog</div>
+          </div>
+         
+          <div class="mobile-nav-column-inner">
+            <div class="mobile-nav-menu-container mobile-menu-level-1">
+              <div class="mobile-nav-menu-quicklink">
+                {{ quick_link_html }}
+              </div>
+              <ul class="main-nav">
+                {%- for block in section.blocks -%}
+                  {% assign nav = block.settings.hero_links %}
+                  {% assign nav_title = block.settings.hero_linklist_title | default: nav.title %}
+                  {% assign nav_link = block.settings.hero_menu_link %}
+
+                  <li class="main-nav__item {% if nav.links != blank %} main-nav__has-dropdown{% endif %}">
+                    {% if block.settings.hero_svg %}
+                      {{ block.settings.hero_svg | image_url: width: "20", height: '25' | image_tag: class: 'link-icon' }}
+                    {% endif %}
+
+                    {% if nav_link != blank %}
+                      <a href="{{ nav_link }}" class="main-nav__item__title">
+                        {{ nav_title }}
+
+                        {% if nav.size > 0 %}
+                          {% render 'icon-arrow' %}
+                        {% endif %}
+                      </a>
+                    {% else %}
+                      <span class="main-nav__item__title">
+                        {{ nav_title }}
+
+                        {% if nav.size > 0 %}
+                          {% render 'icon-arrow' %}
+                        {% endif %}
+                      </span>
+                    {% endif %}              
+
+                    {% if nav.links != blank %}
+                      <ul class="main-nav__second-level">
+                        {% for second_link in nav.links %}
+                          <li class="main-nav__item main-nav__second-level__item {% if second_link.links != blank %} main-nav__has-dropdown{% endif %}">
+                            <span class="main-nav__item__title main-nav__second-level__item__title">
+                              <a href="{{ second_link.url }}">
+                                {{ second_link.title }}
+                              </a>
+                             
+                              {% if second_link.links.size > 0 %}
+                                {% render 'icon-arrow' %}
+                              {% endif %}
+                            </span>
+
+                            {% if second_link.links != blank %}
+                              <ul class="main-nav__third-level">
+                                {% for third_link in second_link.links %}
+                                  <li class="main-nav__item main-nav__third-level__item {% if third_link.links != blank %} main-nav__has-dropdown{% endif %}">
+                                    <a href="{{ third_link.url }}" class="main-nav__item__title main-nav__third-level__item__title">{{ third_link.title }}</a>
+                                  </li>
+                                {% endfor %}
+                              </ul>
+                            {% endif %}
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {%- endfor -%}
+
+                {%- if shop.customer_accounts_enabled -%}
+                  <li class="mobile-menu-content accounts utils__item accounts--mobile">
+                    <div class="account-item main-nav__item">
+                      <a href="{{ routes.account_url }}" class="main-nav__link">{{ 'layout.customer.account' | t }}</a>
+                    </div>
+                  </li>
+                {%- endif -%}
+
+                {%- if section.settings.show_language_selector or section.settings.show_country_selector -%}
+                  <li class="main-nav__item mobile-menu-content">
+                    <div class="mobile-header-localization">
+                      {% render 'localization', input_prefix: 'mobile-header' %}
+                    </div>
+                  </li>
+                {%- endif -%}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="mobile-close-region js-close-mobile-menu" aria-label="hidden"></a>
+      </nav>
     </div>
   </header>
 {%- endif -%}
-
+<script>
+  let mob_links = document.querySelectorAll('.main-nav__item:not(.main-nav__second-level__item)')
+  mob_links.forEach(el => {
+    el.addEventListener('click', (e)=>{
+      let item = e.target.closest('li')
+      console.log('e', item)
+      item.classList.toggle('active')
+     
+    })
+  })
+</script>
 {% schema %}
   {
     "name": "Header",
@@ -545,6 +646,35 @@
         "id": "quicklink_url",
         "label": "Link",
         "info": "Add tel: followed by a phone number for phone links and mailto: followed by an email address for email links"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "navigation",
+        "name": "Navigation",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "hero_svg",
+            "label": "Image"
+          }, 
+          {
+            "type": "text",
+            "id": "hero_linklist_title",
+            "label": "Heading",
+            "default": "Quick links"
+          }, 
+          {
+            "type": "url",
+            "id": "hero_menu_link",
+            "label": "Button link"
+          }, 
+          {
+            "type": "link_list",
+            "id": "hero_links",
+            "label": "Menu"
+          }
+        ]
       }
     ]
   }
